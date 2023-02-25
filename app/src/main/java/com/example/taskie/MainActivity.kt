@@ -24,9 +24,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var createNewAccount = findViewById<TextView>(R.id.already_have_account)
+        var createNewAccount = findViewById<TextView>(R.id.newAccount)
         createNewAccount.setOnClickListener{
             val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
+        var forgotPassword = findViewById<TextView>(R.id.forgotPassword)
+        forgotPassword.setOnClickListener{
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
     }
