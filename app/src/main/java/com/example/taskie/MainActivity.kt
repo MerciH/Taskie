@@ -35,5 +35,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
+
+        val calendar = findViewById<Button>(R.id.btnSubmit)
+        calendar.setOnClickListener{
+            val intent = Intent(this, Tasks::class.java)
+            startActivity(intent)
+        }
     }
 }
